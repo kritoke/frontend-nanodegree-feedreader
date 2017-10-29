@@ -37,11 +37,16 @@ $(function() {
             }
         });
 
-
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+
+        it('allFeeds should have a defined name', function() {
+            for (let x = 0; x < allFeeds.length; x++) {
+                expect(allFeeds[x].name).toBeDefined();
+            }
+        });
     });
 
 
