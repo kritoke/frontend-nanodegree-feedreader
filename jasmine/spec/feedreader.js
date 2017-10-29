@@ -31,9 +31,10 @@ $(function() {
          * and that the URL is not empty.
          */
 
-        it('allFeeds should have a defined URL', function() {
+        it('allFeeds should have a defined URL and not be blank', function() {
             for (let x = 0; x < allFeeds.length; x++) {
                 expect(allFeeds[x].url).toBeDefined();
+                expect(allFeeds[x].url).not.toEqual('');
             }
         });
 
@@ -42,9 +43,10 @@ $(function() {
          * and that the name is not empty.
          */
 
-        it('allFeeds should have a defined name', function() {
+        it('allFeeds should have a defined name and not be blank', function() {
             for (let x = 0; x < allFeeds.length; x++) {
                 expect(allFeeds[x].name).toBeDefined();
+                expect(allFeeds[x].name).not.toEqual('');
             }
         });
     });
