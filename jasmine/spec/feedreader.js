@@ -74,7 +74,7 @@ $(function() {
             loadFeed(1, function(done) {
                 expect($('.feed').html()).not.toEqual(currFeed);
                 done();
-            })
+            });
         });
     });
 }());
