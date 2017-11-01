@@ -34,15 +34,15 @@ $(function() {
         /* A test that ensures the menu element is
          * hidden by default. */
         it('menu element should be hidden by default', function() {
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
         it('menu shows up when menu icon is clicked and disappears when clicked again', function() {
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).not.toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
             $('.menu-icon-link').trigger('click');
-            expect($('body').hasClass('menu-hidden')).toBe(true);
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
         });
 
     });
