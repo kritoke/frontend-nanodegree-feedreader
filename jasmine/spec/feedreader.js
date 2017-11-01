@@ -16,17 +16,17 @@ $(function() {
         });
 
         it('allFeeds should have a defined URL and not be blank', function() {
-            for (let x = 0; x < allFeeds.length; x++) {
-                expect(allFeeds[x].url).toBeDefined();
-                expect(allFeeds[x].url).not.toEqual('');
-            }
+            allFeeds.forEach(function(feed) {
+                expect(feed.url).toBeDefined();
+                expect(feed.url).not.toEqual('');
+            });
         });
 
         it('allFeeds should have a defined name and not be blank', function() {
-            for (let x = 0; x < allFeeds.length; x++) {
-                expect(allFeeds[x].name).toBeDefined();
-                expect(allFeeds[x].name).not.toEqual('');
-            }
+            allFeeds.forEach(function(feed) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name).not.toEqual('');
+            });
         });
     });
 
@@ -54,7 +54,7 @@ $(function() {
         });
 
         it('when loadFeed is called, there is at least one .entry element', function() {
-          expect($('.feed .entry').children().length).toBeGreaterThan(0);
+            expect($('.feed .entry').children().length).toBeGreaterThan(0);
         });
     });
 
@@ -74,6 +74,6 @@ $(function() {
                 expect($('.feed').html()).not.toEqual(currFeed);
             });
         });
-      
+
     });
 }());
