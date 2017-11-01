@@ -53,9 +53,8 @@ $(function() {
             loadFeed(0, done);
         });
 
-        it('when loadFeed is called, there is at least one .entry element', function(done) {
-            expect($('.feed .entry')).toBeGreaterThan(0);
-            done();
+        it('when loadFeed is called, there is at least one .entry element', function() {
+          expect($('.feed .entry').children().length).toBeGreaterThan(0);
         });
     });
 
@@ -71,7 +70,7 @@ $(function() {
         });
 
         it('make sure content changes when new feed is loaded by loadFeed', function(done) {
-            loadFeed(1, function(done) {
+            loadFeed(1, function() {
                 expect($('.feed').html()).not.toEqual(currFeed);
             });
         });
