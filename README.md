@@ -21,7 +21,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 * New Feed Selection
   - feed content changes when a new feed is added
   
-## How to Run Application
+## How to Configure the Application
 
 * Set a feed and it's name in the variable allFeeeds, for example:
 ```
@@ -30,5 +30,10 @@ In this project you are given a web-based application that reads RSS feeds. The 
     url: 'http://blog.udacity.com/feed'
 }
 ```
+## Launch Application from within a webpage
 
 * Run `init();` to start the feed program.
+
+## Running the Feed Reader
+
+* Go to index.html and the feed reader should load automatically.
