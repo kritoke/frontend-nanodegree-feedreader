@@ -61,7 +61,17 @@ $(function() {
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
 
+        beforeEach(function(done) {
+            loadFeed(0, done);
+        });
+
+        it('when loadFeed is called, there is at least one .entry element', function(done) {
+            expect($('.feed').children().length).toBeGreaterThan(0);
+            done();
+        });
+
     });
+
 
     /* TODO: Write a test that ensures when the loadFeed
      * function is called and completes its work, there is at least
