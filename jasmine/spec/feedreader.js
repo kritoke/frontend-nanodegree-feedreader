@@ -11,20 +11,20 @@
 $(function() {
     describe('RSS Feeds', function() {
         it('are defined', function() {
-            expect(allFeeds).toBeDefined();
+            expect(allFeeds).toBeTruthy();
             expect(allFeeds.length).not.toBe(0);
         });
 
         it('allFeeds should have a defined URL and not be blank', function() {
             allFeeds.forEach(function(feed) {
-                expect(feed.url).toBeDefined();
+                expect(feed.url).toBeTruthy();
                 expect(feed.url).not.toEqual('');
             });
         });
 
         it('allFeeds should have a defined name and not be blank', function() {
             allFeeds.forEach(function(feed) {
-                expect(feed.name).toBeDefined();
+                expect(feed.name).toBeTruthy();
                 expect(feed.name).not.toEqual('');
             });
         });
