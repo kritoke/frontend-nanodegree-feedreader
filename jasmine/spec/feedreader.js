@@ -69,15 +69,11 @@ $(function() {
             });
         });
 
-        it('make sure content changes when new feed is loaded by loadFeed', function(done) {
+        it('make sure content changes when new feed is loaded by loadFeed', function() {
             loadFeed(1, function() {
                 expect($('.feed').html()).not.toEqual(currFeed);
             });
         });
       
-        afterEach(function() {
-            // set jasmine's default time out back to original timeout
-            jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
-        });
     });
 }());
