@@ -24,9 +24,11 @@ In this project you are given a web-based application that reads RSS feeds. The 
 ## How to Run Application
 
 * Set a feed and it's name in the variable allFeeeds, for example:
-```{
+```
+{
     name: 'Udacity Blog',
     url: 'http://blog.udacity.com/feed'
-}```
+}
+```
 
 * Run `init();` to start the feed program.
