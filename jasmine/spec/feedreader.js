@@ -54,7 +54,7 @@ $(function() {
         });
 
         it('when loadFeed is called, there is at least one .entry element', function(done) {
-            expect($('.feed').children().length).toBeGreaterThan(0);
+            expect($('.feed .entry')).toBeGreaterThan(0);
             done();
         });
     });
@@ -73,8 +73,12 @@ $(function() {
         it('make sure content changes when new feed is loaded by loadFeed', function(done) {
             loadFeed(1, function(done) {
                 expect($('.feed').html()).not.toEqual(currFeed);
-                done();
             });
+        });
+      
+        afterEach(function() {
+            // set jasmine's default time out back to original timeout
+            jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
         });
     });
 }());
