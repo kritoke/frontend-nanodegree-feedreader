@@ -54,7 +54,7 @@ $(function() {
         });
 
         it('when loadFeed is called, there is at least one .entry element', function() {
-            expect($('.feed .entry').children().length).toBeGreaterThan(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
